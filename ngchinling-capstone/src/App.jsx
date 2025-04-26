@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useContext } from 'react'
 import './App.css'
 import { Header } from './components/Header'
 import { StockList } from './components/StockList'
 import Form from './components/Form'
+import { StockProvider } from './contexts/StockContext'
 
 function App() {
-  // const [count, setCount] = useState(0)
+
 
   const stockListData = [
     {
@@ -26,10 +25,11 @@ function App() {
 
   return (
     <>
-    <Header title="Finance Dashboard" />
-    <Form />
-    <StockList title="Stock List" stockListData={stockListData} />
-    
+    <StockProvider>
+      <Header title="Finance Dashboard" />
+      <Form />
+      <StockList title="Stock List" />
+    </StockProvider>
     </>
   )
 }

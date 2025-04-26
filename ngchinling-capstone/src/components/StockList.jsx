@@ -1,8 +1,14 @@
-function StockList({ title, stockListData }) {
+import { StockContext } from "../contexts/StockContext";
+import { useContext } from 'react';
+
+function StockList({ title }) {
+
+  const { stocks } = useContext(StockContext);
+
     return (
       <div className="stock-list">
         <h2>{title}</h2>
-        {Array.isArray(stockListData) && stockListData.length > 0 ? (
+        {Array.isArray(stocks) && stocks.length > 0 ? (
           <table>
             <thead>
               <tr>
@@ -13,8 +19,8 @@ function StockList({ title, stockListData }) {
               </tr>
             </thead>
             <tbody>
-              {stockListData.map((stock) => (
-                <tr key={stock.symbol}>
+              {stocks.map((stock, index) => (
+                <tr key={index}>
                   <td>{stock.symbol}</td>
                   <td>{stock.quantity}</td>
                   <td>{stock.purchasePrice}</td>
