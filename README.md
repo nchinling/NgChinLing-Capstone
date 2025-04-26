@@ -2,7 +2,7 @@
 This is the capstone project
 
 ## Part 1 - Form and CSS styling
- ![Form and CSS styling](./images/capstone_part1.png)
+ ![Form and CSS styling](./ngchinling-capstone/images/capstone_part1.png)
 
 ## React + Vite
 
