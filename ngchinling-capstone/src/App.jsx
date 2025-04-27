@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useContext } from 'react'
 import './App.css'
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 import { StockList } from './components/StockList'
 import Form from './components/Form'
+import { StockProvider } from './contexts/StockContext'
+import { ProfitLossProvider } from './contexts/ProfitLossContext'
 
 function App() {
-  // const [count, setCount] = useState(0)
-
-  const stockListData = [
-    {
-      symbol: 'AAPL',
-      quantity: '200',
-      purchasePrice: '200.56',
-      currentPrice: '300.67',
-    },
-    {
-      symbol: 'MSFT',
-      quantity: '1500',
-      purchasePrice: '256.45',
-      currentPrice: '367.78',
-    }
-  ];
 
   return (
     <>
-    <Header title="Finance Dashboard" />
-    <Form />
-    <StockList title="Stock List" stockListData={stockListData} />
-    
+      <Header title="Finance Dashboard" />
+      <StockProvider>
+        <ProfitLossProvider>
+          <Form />
+          <StockList title="Stock List" />
+        </ProfitLossProvider>
+      </StockProvider>
+      <Footer name="Ng Chin Ling"></Footer>
     </>
   )
 }

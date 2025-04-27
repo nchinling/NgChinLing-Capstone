@@ -1,4 +1,124 @@
 .stock-list {
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stock-list h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: separate; /* CHANGE: from collapse to separate */
+    border-spacing: 0; /* no extra spacing between borders */
+    border: 1px solid #ddd; /* add outer border */
+    border-radius: 8px; /* slight rounding */
+    overflow: hidden; /* for rounded corners */
+  }
+  
+  thead {
+    background-color: #0077cc;
+    color: white;
+  }
+  
+  th, td {
+    padding: 1rem; /* ADD: more padding for spacing */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd; /* ADD: vertical lines between columns */
+    font-size: 1rem;
+  }
+  
+  /* Remove last column's extra right border */
+  td:last-child, th:last-child {
+    border-right: none;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f9ff;
+  }
+  
+  th {
+    font-size: 1.1rem;
+  }
+  
+  td:last-child {
+    font-weight: bold;
+  }
+  
+  p {
+    text-align: center;
+    color: #666;
+  }
+  
+
+
+/* Part 2
+.stock-list {
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stock-list h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #0077cc;
+    color: white;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f9ff;
+  }
+  
+  td {
+    font-size: 1rem;
+  }
+    
+  th {
+    font-size: 1.1rem;
+  }
+  
+  td:last-child {
+    font-weight: bold;
+  }
+  
+  p {
+    text-align: center;
+    color: #666;
+  }
+   */
+
+
+
+/* Part 1 */
+/* .stock-list {
     text-align: left;
     margin: 1rem;
 }
@@ -24,5 +144,5 @@ text-align: left;
 .stock-list th {
 background-color: #f2f2f2;
 }
-  
+   */
   
