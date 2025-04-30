@@ -1,0 +1,9 @@
+.stock-card {
+    border: 3px solid #ddd;
+    border-radius: 20px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }

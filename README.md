@@ -5,6 +5,11 @@ The Finance Project is built using React, Vite (and Express). The dashboard will
 <!-- ![Form and CSS styling](./images/capstone_part1.png) -->
 ![Form and CSS styling](./ngchinling-capstone/images/capstone_part1.png)
 
+## Dashboard v2 (card version)
+![API call](./ngchinling-capstone/images/fd.png)
+
+## Dashboard v1 (table version)
+![API call](./ngchinling-capstone/images/dashboard2.png)
 
 ## API calls
 ![API call](./ngchinling-capstone/images/capstone_getprice.png)
@@ -13,6 +18,4 @@ The Finance Project is built using React, Vite (and Express). The dashboard will
 ![API call](./ngchinling-capstone/images/capstone_display.png)
 
 
-## Table of stock value results
-![API call](./ngchinling-capstone/images/capstone_part2.png)
 
