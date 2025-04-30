@@ -15,7 +15,6 @@ function Form() {
   const { calculateProfitLoss } = useContext(ProfitLossContext);
 
 
-
   useEffect(() => {
     const fetchClosingPrice = async () => {
       if (symbol.trim() === '') {

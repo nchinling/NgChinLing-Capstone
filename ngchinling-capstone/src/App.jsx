@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Header title="Finance Dashboard" />
+      <Header title=" Finance Dashboard" image="/images/stockmarket.png" />
       <StockProvider>
         <ProfitLossProvider>
           <Form />
