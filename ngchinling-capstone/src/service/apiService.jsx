@@ -1,4 +1,3 @@
-// const APIKEY = '1C3Q5L578EQ701SU'
 const APIKEY = import.meta.env.VITE_ALPHAVANTAGE_APIKEY;
 
 
