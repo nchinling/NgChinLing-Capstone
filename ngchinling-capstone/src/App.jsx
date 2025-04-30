@@ -18,7 +18,7 @@ function App() {
           <StockList title="Stock List" />
         </ProfitLossProvider>
       </StockProvider>
-      <Footer name="Ng Chin Ling"></Footer>
+      <Footer name="Ng Chin Ling "></Footer>
     </>
   )
 }
