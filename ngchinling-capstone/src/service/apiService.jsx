@@ -1,13 +1,29 @@
-const API_BASE_URL = 'http://localhost:5000';
+// const APIKEY = '1C3Q5L578EQ701SU'
+const APIKEY = import.meta.env.VITE_ALPHAVANTAGE_APIKEY;
+
 
 const getClosingPriceFromAPI = async (symbol = 'IBM') => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/data?symbol=${symbol}`);
-    if (!response.ok) {
-      throw new Error('Error fetching data');
-    }
+    const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${APIKEY}`);
     const data = await response.json();
-    return data;
+
+
+    // Access the 'Global Quote' from the response data
+    const globalQuote = data['Global Quote'];
+
+    if (globalQuote) {
+      const latestClose = globalQuote['05. price'];
+
+      // Send the response with symbol and closing price
+      return {
+        symbol: symbol,
+        closing_price: latestClose
+      };
+    } else {
+      // Handle the case where no data is returned for the symbol
+      throw new Error('No data found for the given symbol');
+    }
+
   } catch (error) {
     console.error('Error fetching data:', error);
     throw error;
@@ -15,3 +31,4 @@ const getClosingPriceFromAPI = async (symbol = 'IBM') => {
 };
 
 export { getClosingPriceFromAPI }
+
