@@ -5,6 +5,7 @@ const APIKEY = import.meta.env.VITE_ALPHAVANTAGE_APIKEY;
 const getClosingPriceFromAPI = async (symbol = 'IBM') => {
   try {
     const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${APIKEY}`);
+    // const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=demo`);
     const data = await response.json();
 
 
